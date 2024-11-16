@@ -47,17 +47,6 @@ class GptService {
 
       const resJson: string = response.choices[0].message.content;
 
-      // const messageContent = response?.choices?.[0]?.message?.content;
-      // if (!messageContent) {
-      //   throw new Error("Invalid response format from OpenAI.");
-      // }
-
-      // // Clean up the Python code response
-      // const cleanedSolution = messageContent
-      //   .replace(/```python\n?/g, "")
-      //   .replace(/```/g, "")
-      //   .trim();
-      // return cleanedSolution;
       return resJson;
     } catch (error: any) {
       console.error("Error evaluating image:", error.message);
